@@ -1,5 +1,5 @@
-import lightBg from './assets/bg.svg';
-import darkBg from './assets/darkBg.svg';
+import darkBg from './assets/subtle-prism2.svg';
+import lightBg from './assets/subtle-prism.svg';
 
 export interface Theme {
   appTitleColor: string;

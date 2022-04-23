@@ -19,7 +19,7 @@ html {
   font-size: 16px;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Fira Code', sans-serif;
   display: flex;
   justify-content: center;
   min-height: 100vh;

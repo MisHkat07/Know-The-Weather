@@ -1,17 +1,23 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
-import { ExtendedForecastData, WeatherData } from '../api/types';
-import { fetchExtendedForecastData, fetchWeatherData } from '../api/weather';
-import { getNextSevenDays } from '../utils/dateUtils';
-import { kelvinToCelcius } from '../utils/unitConversion';
-import { setIsInitial, setIsLoading } from './reducers/appReducer';
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import { ExtendedForecastData, WeatherData } from "../api/types";
+import { fetchExtendedForecastData, fetchWeatherData } from "../api/weather";
+import { getNextSevenDays } from "../utils/dateUtils";
+import { kelvinToCelcius } from "../utils/unitConversion";
+import { setIsInitial, setIsLoading } from "./reducers/appReducer";
 
 export const fetchWeather = createAsyncThunk(
-  'weather/fetchWeather',
-  async (city: string | { lat: number; lng: number }, { dispatch, rejectWithValue, fulfillWithValue }) => {
+  "weather/fetchWeather",
+  async (
+    city: string | { lat: number; lng: number },
+    { dispatch, rejectWithValue, fulfillWithValue }
+  ) => {
     dispatch(setIsLoading(true));
 
     try {
-      const res = await Promise.all([fetchWeatherData(city), fetchExtendedForecastData(city)]);
+      const res = await Promise.all([
+        fetchWeatherData(city),
+        fetchExtendedForecastData(city),
+      ]);
       dispatch(setIsLoading(false));
 
       if (res[0].cod === 200) {
@@ -21,7 +27,7 @@ export const fetchWeather = createAsyncThunk(
       return rejectWithValue(res[0].message);
     } catch {
       dispatch(setIsLoading(false));
-      return rejectWithValue('Error');
+      return rejectWithValue("Error");
     }
   }
 );

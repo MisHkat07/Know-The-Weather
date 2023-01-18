@@ -9,6 +9,7 @@ import { darkTheme, lightTheme } from './theme';
 const App: React.FC = () => {
   const darkMode = useSelector((state: AppStore) => state.app.darkMode);
   return (
+    
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <GlobalStyles />
       <Home />

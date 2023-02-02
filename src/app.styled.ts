@@ -1,7 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
-import { Theme } from './theme';
+import { createGlobalStyle } from "styled-components";
+import { Theme } from "./theme";
 
-declare module 'styled-components' {
+declare module "styled-components" {
   /* tslint:disable */
   export interface DefaultTheme extends Theme {}
 }
@@ -23,8 +23,11 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  background: url(${({ theme }) => theme.backgroundImage}) no-repeat center 120%, linear-gradient(${({ theme }) =>
-  theme.backgroundGradient.color1} 0%, ${({ theme }) => theme.backgroundGradient.color2} 100%);
+  background: url(${({ theme }) =>
+    theme.backgroundImage}) no-repeat center 120%, linear-gradient(${({
+  theme,
+}) => theme.backgroundGradient.color1} 0%, ${({ theme }) =>
+  theme.backgroundGradient.color2} 100%);
   background-size: auto;
 }
 #root {

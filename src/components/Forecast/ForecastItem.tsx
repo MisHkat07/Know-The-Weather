@@ -1,7 +1,7 @@
-import React from 'react';
-import Temperature from '../CurrentWeather/Temperature';
-import WeatherIcon from '../CurrentWeather/WeatherIcon';
-import { ForecastItemContainer } from './styled';
+import React from "react";
+import Temperature from "../CurrentWeather/Temperature";
+import WeatherIcon from "../CurrentWeather/WeatherIcon";
+import { ForecastItemContainer } from "./styled";
 
 interface IForecastItemProps {
   day: string;

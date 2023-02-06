@@ -1,9 +1,9 @@
-import React from 'react';
-import { HeaderContainer, Title, HeaderIconsContainer } from './styed';
-import { useDispatch, useSelector } from 'react-redux';
-import DarkModeToggle from 'react-dark-mode-toggle';
-import { AppStore } from '../../store/store';
-import { toggleDarkMode } from '../../store/reducers/appReducer';
+import React from "react";
+import { HeaderContainer, Title, HeaderIconsContainer } from "./styed";
+import { useDispatch, useSelector } from "react-redux";
+import DarkModeToggle from "react-dark-mode-toggle";
+import { AppStore } from "../../store/store";
+import { toggleDarkMode } from "../../store/reducers/appReducer";
 
 const Header: React.FC = () => {
   const dispatch = useDispatch();

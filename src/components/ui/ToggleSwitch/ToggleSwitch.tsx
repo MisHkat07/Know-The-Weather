@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Switch = styled.label`
   position: relative;
@@ -64,7 +64,11 @@ const ToggleSwitch: React.FC<IToggleSwitchProps> = (props) => {
     >
       {toggled && <span className="on">C</span>}
       {!toggled && <span className="off">F</span>}
-      <Slider style={{ transform: toggled ? ' translateX(28px)' : ' translateX(0px)' }}></Slider>
+      <Slider
+        style={{
+          transform: toggled ? " translateX(28px)" : " translateX(0px)",
+        }}
+      ></Slider>
     </Switch>
   );
 };

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -23,4 +23,3 @@ export const HeaderIconsContainer = styled.div`
   display: flex;
   align-items: center;
 `;
-

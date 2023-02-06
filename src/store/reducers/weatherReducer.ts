@@ -1,12 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { ExtendedForecastData, WeatherData } from '../../api/types';
-import { fetchWeather, transformWeatherData } from '../fetchWeather';
+import { createSlice } from "@reduxjs/toolkit";
+import { ExtendedForecastData, WeatherData } from "../../api/types";
+import { fetchWeather, transformWeatherData } from "../fetchWeather";
 
 export type WeatherState = {
   weatherData: WeatherData;
   extendedWeatherData: ExtendedForecastData[];
   isError: boolean;
-}
+};
 
 const initialState: WeatherState = {
   weatherData: {
@@ -18,17 +18,17 @@ const initialState: WeatherState = {
       temp_max: 0,
       temp_min: 0,
     },
-    name: '',
+    name: "",
     sys: {
-      country: '',
+      country: "",
       sunrise: 0,
       sunset: 0,
     },
     weather: {
       id: 200,
-      main: '',
-      description: '',
-      icon: '',
+      main: "",
+      description: "",
+      icon: "",
     },
     wind: {
       deg: 0,
@@ -40,7 +40,7 @@ const initialState: WeatherState = {
 };
 
 const weatherSlice = createSlice({
-  name: 'weather',
+  name: "weather",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
